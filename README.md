@@ -73,3 +73,83 @@ nothing to commit, working tree clean
 
 ```
 ### Exercises 2
+
+```bash 
+
+Gym-Git-Exercise-Solutions (main) $ touch home.html
+Gym-Git-Exercise-Solutions (main) $ git stash
+Saved working directory and index state WIP on main: fa8580e Reset and update README content
+Gym-Git-Exercise-Solutions (main) $ touch about.html
+Gym-Git-Exercise-Solutions (main) $ git stash pop
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (2fce8625302da174cae010bfe19a87a50b63e0d2)
+Gym-Git-Exercise-Solutions (main) $ git stash
+Saved working directory and index state WIP on main: fa8580e Reset and update README content
+Gym-Git-Exercise-Solutions (main) $ git stash
+No local changes to save
+Gym-Git-Exercise-Solutions (main) $ git stash about
+fatal: subcommand wasn't specified; 'push' can't be assumed due to unexpected token 'about'
+Gym-Git-Exercise-Solutions (main) $ git stash
+No local changes to save
+Gym-Git-Exercise-Solutions (main) $ touch team.html
+Gym-Git-Exercise-Solutions (main) $ git stash
+No local changes to save
+Gym-Git-Exercise-Solutions (main) $ git reset
+Gym-Git-Exercise-Solutions (main) $ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        home.html
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+Gym-Git-Exercise-Solutions (main) $ ^C
+Gym-Git-Exercise-Solutions (main) $ git stash pop
+error: Your local changes to the following files would be overwritten by merge:
+        README.md
+Please commit your changes or stash them before you merge.
+Aborting
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        about.html
+        home.html
+        team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+The stash entry is kept in case you need it again.
+Gym-Git-Exercise-Solutions (main) $ ^C
+Gym-Git-Exercise-Solutions (main) $ git stash -u
+Saved working directory and index state WIP on main: fa8580e Reset and update README content
+Gym-Git-Exercise-Solutions (main) $ git stash list
+stash@{0}: WIP on main: fa8580e Reset and update README content
+stash@{1}: WIP on main: fa8580e Reset and update README content
+Gym-Git-Exercise-Solutions (main) $ git stash pop stash@{1}
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped stash@{1} (b269778c5075a8be0af0afd3f36ea2bd9be59477)
+Gym-Git-Exercise-Solutions (main) $
+
+```
