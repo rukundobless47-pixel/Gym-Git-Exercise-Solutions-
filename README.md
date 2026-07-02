@@ -153,3 +153,110 @@ Dropped stash@{1} (b269778c5075a8be0af0afd3f36ea2bd9be59477)
 Gym-Git-Exercise-Solutions (main) $
 
 ```
+
+## bundel 2
+
+### Exercises 1
+
+```bash
+Gym-Git-Exercise-Solutions (main) $ git branch ft/bundel-2
+Gym-Git-Exercise-Solutions (main) $ git checkout ft/bundel-2
+M       README.md
+Switched to branch 'ft/bundel-2'
+Gym-Git-Exercise-Solutions (ft/bundel-2) $ touch services.html
+Gym-Git-Exercise-Solutions (ft/bundel-2) $ git add services.html
+Gym-Git-Exercise-Solutions (ft/bundel-2) $ git commit -m "I have added the new file"
+[ft/bundel-2 b9eda8d] I have added the new file
+ 1 file changed, 13 insertions(+)
+ create mode 100644 services.html
+Gym-Git-Exercise-Solutions (ft/bundel-2) $ git checkout main
+M       README.md
+Switched to branch 'main'
+Gym-Git-Exercise-Solutions (main) $ giti push ^C
+Gym-Git-Exercise-Solutions (main) $ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+Gym-Git-Exercise-Solutions (main) $ git checkout ft/bundel-2
+M       README.md
+Switched to branch 'ft/bundel-2'
+Gym-Git-Exercise-Solutions (ft/bundel-2) $ git push -u origin ft/bundel-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 520 bytes | 260.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'ft/bundel-2' on GitHub by visiting:
+remote:      https://github.com/rukundobless47-pixel/Gym-Git-Exercise-Solutions-/pull/new/ft/bundel-2
+remote:
+To https://github.com/rukundobless47-pixel/Gym-Git-Exercise-Solutions-.git
+ * [new branch]      ft/bundel-2 -> ft/bundel-2
+branch 'ft/bundel-2' set up to track 'origin/ft/bundel-2'.
+Gym-Git-Exercise-Solutions (ft/bundel-2) $ git status
+On branch ft/bundel-2
+Your branch is up to date with 'origin/ft/bundel-2'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Gym-Git-Exercise-Solutions (ft/bundel-2) $ git diff README.md
+diff --git a/README.md b/README.md
+index 794ed27..3017b13 100644
+--- a/README.md
++++ b/README.md
+@@ -152,4 +152,13 @@ no changes added to commit (use "git add" and/or "git commit -a")
+ Dropped stash@{1} (b269778c5075a8be0af0afd3f36ea2bd9be59477)
+ Gym-Git-Exercise-Solutions (main) $
+
++```
++
++## bundel 2
++
++### Exercises 1
++
++```bash
++
++
+ ```
+\ No newline at end of file
+Gym-Git-Exercise-Solutions (ft/bundel-2) $ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+Gym-Git-Exercise-Solutions (ft/bundel-2) $ git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Gym-Git-Exercise-Solutions (main) $ ls -la
+total 20
+drwxr-xr-x 1 rukun 197609    0 Jul  2 17:52 ./
+drwxr-xr-x 1 rukun 197609    0 Jul  1 22:23 ../
+drwxr-xr-x 1 rukun 197609    0 Jul  2 17:52 .git/
+drwxr-xr-x 1 rukun 197609    0 Jul  2 16:58 Gym-Git-Exercise-Solutions/
+-rw-r--r-- 1 rukun 197609 6060 Jul  2 17:34 README.md
+Gym-Git-Exercise-Solutions (main) $ log
+bash: log: command not found
+Gym-Git-Exercise-Solutions (main) $ git log --online
+fatal: unrecognized argument: --online
+Gym-Git-Exercise-Solutions (main) $ git log --oneline
+502daf4 (HEAD -> main, origin/main) The exercises contains the stash and how to pop them and and also to pop what exactly what ypu want
+fa8580e Reset and update README content
+6a099b6 The exercises about branches and to switch through them
+e7f26d8 Exercise 1 is done
+944414b Initial commit
+5f9a2d8 Initial commit
+Gym-Git-Exercise-Solutions (main) $ git merge ft\bundel-2
+merge: ftbundel-2 - not something we can merge
+Gym-Git-Exercise-Solutions (main) $
+
+
+```
