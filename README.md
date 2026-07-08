@@ -218,45 +218,12 @@ index 794ed27..3017b13 100644
  Dropped stash@{1} (b269778c5075a8be0af0afd3f36ea2bd9be59477)
  Gym-Git-Exercise-Solutions (main) $
 
-+```
-+
-+## bundel 2
-+
-+### Exercises 1
-+
-+```bash
-+
-+
- ```
-\ No newline at end of file
-Gym-Git-Exercise-Solutions (ft/bundel-2) $ git push -u origin main
-branch 'main' set up to track 'origin/main'.
-Everything up-to-date
-Gym-Git-Exercise-Solutions (ft/bundel-2) $ git checkout main
-M       README.md
-Switched to branch 'main'
-Your branch is up to date with 'origin/main'.
-Gym-Git-Exercise-Solutions (main) $ ls -la
-total 20
-drwxr-xr-x 1 rukun 197609    0 Jul  2 17:52 ./
-drwxr-xr-x 1 rukun 197609    0 Jul  1 22:23 ../
-drwxr-xr-x 1 rukun 197609    0 Jul  2 17:52 .git/
-drwxr-xr-x 1 rukun 197609    0 Jul  2 16:58 Gym-Git-Exercise-Solutions/
--rw-r--r-- 1 rukun 197609 6060 Jul  2 17:34 README.md
-Gym-Git-Exercise-Solutions (main) $ log
-bash: log: command not found
-Gym-Git-Exercise-Solutions (main) $ git log --online
-fatal: unrecognized argument: --online
-Gym-Git-Exercise-Solutions (main) $ git log --oneline
-502daf4 (HEAD -> main, origin/main) The exercises contains the stash and how to pop them and and also to pop what exactly what ypu want
-fa8580e Reset and update README content
-6a099b6 The exercises about branches and to switch through them
-e7f26d8 Exercise 1 is done
-944414b Initial commit
-5f9a2d8 Initial commit
-Gym-Git-Exercise-Solutions (main) $ git merge ft\bundel-2
-merge: ftbundel-2 - not something we can merge
-Gym-Git-Exercise-Solutions (main) $
+```
+## bundel 2
 
+### Exercises 1
 
+```bash
+
+ 
 ```
