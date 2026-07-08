@@ -224,6 +224,6 @@ index 794ed27..3017b13 100644
 ### Exercises 1
 
 ```bash
-
+This is about exercises 1 in this bundel
  
 ```
