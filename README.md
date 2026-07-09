@@ -391,3 +391,316 @@ Gym-Git-Exercise-Solutions (main) $
 
 ### bundel 3
 ## exercise 1
+
+```bash 
+Gym-Git-Exercise-Solutions (main) $ git checkout ft/team-page
+error: pathspec 'ft/team-page' did not match any file(s) known to git
+Gym-Git-Exercise-Solutions (main) $ git branch ft/team-page
+Gym-Git-Exercise-Solutions (main) $ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Gym-Git-Exercise-Solutions (ft/team-page) $ touch team.html
+Gym-Git-Exercise-Solutions (ft/team-page) $ git add .
+Gym-Git-Exercise-Solutions (ft/team-page) $ git status
+On branch ft/team-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Gym-Git-Exercise-Solutions (ft/team-page) $ git commit -m "I have created new file called team.html"
+[ft/team-page 2481745] I have created new file called team.html
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 team.html
+Gym-Git-Exercise-Solutions (ft/team-page) $ git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 287 bytes | 57.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/rukundobless47-pixel/Gym-Git-Exercise-Solutions-/pull/new/ft/team-page
+remote:
+To https://github.com/rukundobless47-pixel/Gym-Git-Exercise-Solutions-.git
+ * [new branch]      ft/team-page -> ft/team-page
+Gym-Git-Exercise-Solutions (ft/team-page) $ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> ft/team-page
+
+Gym-Git-Exercise-Solutions (ft/team-page) $ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Gym-Git-Exercise-Solutions (main) $ git log --oneline
+17477b0 (HEAD -> main, origin/main, origin/HEAD) Exercise two is done about pull request and merging the branches
+781ef24 (origin/ft/service-redesign, ft/service-redesign) heading added into service.html
+549f03b Update README for Exercises 1 section
+6edf9cf this is exercises two stating point
+25519bb The exercises it  about pulling and request on gitbuh and merging brances
+502daf4 The exercises contains the stash and how to pop them and and also to pop what exactly what ypu want
+fa8580e Reset and update README content
+6a099b6 The exercises about branches and to switch through them
+e7f26d8 Exercise 1 is done
+944414b Initial commit
+5f9a2d8 Initial commit
+Gym-Git-Exercise-Solutions (main) $ git log
+commit 17477b0e47935729ce2ac65cc93da252e6a82363 (HEAD -> main, origin/main, origin/HEAD)
+Author: Bless <rukundobless47@gmail.com>
+Date:   Thu Jul 9 00:31:58 2026 +0200
+
+    Exercise two is done about pull request and merging the branches
+
+commit 781ef24c74495b5103369b9ab7320a6e31251df6 (origin/ft/service-redesign, ft/service-redesign)
+Author: Bless <rukundobless47@gmail.com>
+Date:   Thu Jul 9 00:07:12 2026 +0200
+
+    heading added into service.html
+
+commit 549f03b08243d37dde65f6c59c6923aa7e27d54a
+Author: rukundo bless <rukundobless47@gmail.com>
+Date:   Wed Jul 8 23:53:51 2026 +0200
+
+    Update README for Exercises 1 section
+
+commit 6edf9cf963d5152353c4e61fb7a1c990c25fe156
+Author: Bless <rukundobless47@gmail.com>
+Date:   Wed Jul 8 23:46:55 2026 +0200
+
+    this is exercises two stating point
+
+commit 25519bb2964f1ab2e943cda125ee65f1568f10e4
+Author: Bless <rukundobless47@gmail.com>
+Date:   Thu Jul 2 18:07:57 2026 +0200
+
+    The exercises it  about pulling and request on gitbuh and merging brances
+
+commit 502daf4c88221cb8e781eeef31083fb41352ef1e
+Author: Bless <rukundobless47@gmail.com>
+Date:   Thu Jul 2 17:32:22 2026 +0200
+
+    The exercises contains the stash and how to pop them and and also to pop what exactly what ypu want
+
+commit fa8580eb46939db072e7d54834bc7f76ddbc4991
+Author: Bless <rukundobless47@gmail.com>
+Date:   Thu Jul 2 17:10:19 2026 +0200
+
+    Reset and update README content
+
+commit 6a099b64bfd51f0986a19d71d56279d19d399d35
+Author: Bless <rukundobless47@gmail.com>
+Date:   Thu Jul 2 16:55:05 2026 +0200
+
+    The exercises about branches and to switch through them
+
+commit e7f26d8df9a83a6d7a84474c8164cb68ab77e8d1
+Gym-Git-Exercise-Solutions (main) $ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git cherry-pick^C
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git log -n 1 --oneline ft/team-page
+2481745 (origin/ft/team-page, ft/team-page) I have created new file called team.html
+Gym-Git-Exercise-Solutions (ft/contact-page) $ ^C
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git cherry-pick 2481745
+[ft/contact-page ee3671b] I have created new file called team.html
+ Date: Thu Jul 9 10:25:30 2026 +0200
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 team.html
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git log --oneline
+ee3671b (HEAD -> ft/contact-page) I have created new file called team.html
+17477b0 (origin/main, origin/HEAD, main) Exercise two is done about pull request and merging the branches
+781ef24 (origin/ft/service-redesign, ft/service-redesign) heading added into service.html
+549f03b Update README for Exercises 1 section
+6edf9cf this is exercises two stating point
+25519bb The exercises it  about pulling and request on gitbuh and merging brances
+502daf4 The exercises contains the stash and how to pop them and and also to pop what exactly what ypu want
+fa8580e Reset and update README content
+6a099b6 The exercises about branches and to switch through them
+e7f26d8 Exercise 1 is done
+944414b Initial commit
+5f9a2d8 Initial commit
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git add .
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git add .
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git status
+On branch ft/contact-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   team.html
+
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git commit -m "Added Players of our team"
+[ft/contact-page 3015db3] Added Players of our team
+ 1 file changed, 18 insertions(+)
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git push origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 712 bytes | 178.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/rukundobless47-pixel/Gym-Git-Exercise-Solutions-/pull/new/ft/contact-page
+remote:
+To https://github.com/rukundobless47-pixel/Gym-Git-Exercise-Solutions-.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> ft/contact-page
+
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1017 bytes | 44.00 KiB/s, done.
+From https://github.com/rukundobless47-pixel/Gym-Git-Exercise-Solutions-
+   3015db3..a4f263d  ft/contact-page -> origin/ft/contact-page
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> ft/contact-page
+
+Gym-Git-Exercise-Solutions (ft/contact-page) $ ^C
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git pull remote ft/contact-page
+fatal: 'remote' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git pull ft/contact-page
+fatal: 'ft/contact-page' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Gym-Git-Exercise-Solutions (ft/contact-page) $ branch ft/faq-page
+bash: branch: command not found
+Gym-Git-Exercise-Solutions (ft/contact-page) $ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+Gym-Git-Exercise-Solutions (ft/faq-page) $ touch faq.html
+Gym-Git-Exercise-Solutions (ft/faq-page) $ git add .
+Gym-Git-Exercise-Solutions (ft/faq-page) $ git status
+On branch ft/faq-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   faq.html
+
+Gym-Git-Exercise-Solutions (ft/faq-page) $ git commit -m "new file called faq.html created"
+[ft/faq-page 78247b1] new file called faq.html created
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 faq.html
+Gym-Git-Exercise-Solutions (ft/faq-page) $ git push origin ft/faq-pqge
+error: src refspec ft/faq-pqge does not match any
+error: failed to push some refs to 'https://github.com/rukundobless47-pixel/Gym-Git-Exercise-Solutions-.git'
+Gym-Git-Exercise-Solutions (ft/faq-page) $ git push origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 279 bytes | 139.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/rukundobless47-pixel/Gym-Git-Exercise-Solutions-/pull/new/ft/faq-page
+remote:
+To https://github.com/rukundobless47-pixel/Gym-Git-Exercise-Solutions-.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+Gym-Git-Exercise-Solutions (ft/faq-page) $ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Gym-Git-Exercise-Solutions (ft/team-page) $ git log --oneline
+2481745 (HEAD -> ft/team-page, origin/ft/team-page) I have created new file called team.html
+17477b0 (origin/main, origin/HEAD, main) Exercise two is done about pull request and merging t
+he branches
+781ef24 (origin/ft/service-redesign, ft/service-redesign) heading added into service.html
+549f03b Update README for Exercises 1 section
+6edf9cf this is exercises two stating point
+25519bb The exercises it  about pulling and request on gitbuh and merging brances
+502daf4 The exercises contains the stash and how to pop them and and also to pop what exactly
+what ypu want
+fa8580e Reset and update README content
+6a099b6 The exercises about branches and to switch through them
+e7f26d8 Exercise 1 is done
+944414b Initial commit
+5f9a2d8 Initial commit
+Gym-Git-Exercise-Solutions (ft/team-page) $ ^C
+Gym-Git-Exercise-Solutions (ft/team-page) $ git revert 2481745
+[ft/team-page 731544c] Revert "I have created new file called team.html"
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 team.html
+
+Gym-Git-Exercise-Solutions (ft/team-page) $ git checkout ft/service-redesign
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+Gym-Git-Exercise-Solutions (ft/team-page) $ git status
+On branch ft/team-page
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Gym-Git-Exercise-Solutions (ft/team-page) $ git add .
+Gym-Git-Exercise-Solutions (ft/team-page) $ git status
+On branch ft/team-page
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+Gym-Git-Exercise-Solutions (ft/team-page) $ git commit -m "Added bundel 3 into readme file"
+[ft/team-page 41dc697] Added bundel 3 into readme file
+ 1 file changed, 3 insertions(+)
+Gym-Git-Exercise-Solutions (ft/team-page) $ git push origin ft/team-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 630 bytes | 315.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/rukundobless47-pixel/Gym-Git-Exercise-Solutions-.git
+   2481745..41dc697  ft/team-page -> ft/team-page
+Gym-Git-Exercise-Solutions (ft/team-page) $ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> ft/team-page
+
+Gym-Git-Exercise-Solutions (ft/team-page) $ ^C
+Gym-Git-Exercise-Solutions (ft/team-page) $
+
+```
